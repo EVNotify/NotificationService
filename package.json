@@ -1,0 +1,25 @@
+{
+  "name": "notificationservice",
+  "version": "1.0.0",
+  "description": "Handles notifications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EVNotify/NotificationService.git"
+  },
+  "author": "GPlay97",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/EVNotify/NotificationService/issues"
+  },
+  "homepage": "https://github.com/EVNotify/NotificationService#readme",
+  "dependencies": {
+    "@evnotify/middlewares": "^1.0.6",
+    "@evnotify/utils": "^1.0.4",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.27"
+  }
+}
