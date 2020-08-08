@@ -6,7 +6,7 @@ const port = process.env.PORT || 3006;
 
 const db = require('@evnotify/utils').db;
 const errorHandler = require('@evnotify/middlewares').errorHandler;
-const notificationRouter = require('./routes/notifications');
+const notificationsRouter = require('./routes/notifications');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -33,7 +33,7 @@ app.use(express.urlencoded({
 }));
 
 // route handling
-app.use('/notifications', notificationRouter);
+app.use('/notifications', notificationsRouter);
 
 // unknown route
 app.use((_req, _res, next) => next(errors.UNKNOWN_ROUTE));
