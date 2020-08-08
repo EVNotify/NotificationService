@@ -14,7 +14,9 @@ module.exports = {
         AUTHORIZATION_SERVICE: 'http://localhost:3001/authorization',
         AUTHENTICATION_SERVICE: 'http://localhost:3002/authentication',
         MAILJET_API_KEY: 'MAILJET_API_KEY',
-        MAILJET_API_SECRET: 'MAILJET_API_SECRET'
+        MAILJET_API_SECRET: 'MAILJET_API_SECRET',
+        MAILJET_MAIL_ADDRESS: 'mail@example.com',
+        MAILJET_MAIL_NAME: 'Jon Doe'
       }
     }]
   };
