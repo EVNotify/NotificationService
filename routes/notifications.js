@@ -7,10 +7,10 @@ const notificationsController = require('../controllers/notifications');
 
 router.get('/', authorizationMiddleware, authenticationMiddleware, notificationsController.getNotificationsQuota);
 
-router.post('/', authorizationMiddleware, authenticationMiddleware, notificationsController.sendNotifications);
-router.post('/mail', authorizationMiddleware, authenticationMiddleware, notificationsController.sendMailNotification);
-router.post('/push', authorizationMiddleware, authenticationMiddleware, notificationsController.sendPushNotification);
-router.post('/telegram', authorizationMiddleware, authenticationMiddleware, notificationsController.sendTelegramNotification);
-router.post('/sms', authorizationMiddleware, authenticationMiddleware, notificationsController.sendSMSNotification);
+router.post('/', authorizationMiddleware, authenticationMiddleware, notificationsController.sendNotification);
+router.post('/mail', authorizationMiddleware, authenticationMiddleware, notificationsController.sendNotification);
+router.post('/push', authorizationMiddleware, authenticationMiddleware, notificationsController.sendNotification);
+router.post('/telegram', authorizationMiddleware, authenticationMiddleware, notificationsController.sendNotification);
+router.post('/sms', authorizationMiddleware, authenticationMiddleware, notificationsController.sendNotification);
 
 module.exports = router;
