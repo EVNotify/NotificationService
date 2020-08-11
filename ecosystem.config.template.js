@@ -13,6 +13,8 @@ module.exports = {
         DB_NAME: 'evnotify',
         AUTHORIZATION_SERVICE: 'http://localhost:3001/authorization',
         AUTHENTICATION_SERVICE: 'http://localhost:3002/authentication',
+        SETTINGS_SERVICE: 'http://localhost:3003/settings',
+        SYNC_SERVICE: 'http://localhost:3004/sync',
         MAILJET_API_KEY: 'MAILJET_API_KEY',
         MAILJET_API_SECRET: 'MAILJET_API_SECRET',
         MAILJET_MAIL_ADDRESS: 'mail@example.com',

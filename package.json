@@ -19,6 +19,7 @@
   "dependencies": {
     "@evnotify/middlewares": "^1.0.6",
     "@evnotify/utils": "^1.0.4",
+    "axios": "^0.19.2",
     "express": "^4.17.1",
     "mongoose": "^5.9.27",
     "node-mailjet": "^3.3.1"
