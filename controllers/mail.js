@@ -23,7 +23,7 @@ const sendMail = (dataObj) => {
                 }],
                 TemplateLanguage: true,
                 TemplateID: templateID,
-                Variables: getDataForTemplateID(templateID, dataObj)
+                Variables: extractDataForTemplate(dataObj)
             }]
         }).then(() => {
             // update last mail timestamp
@@ -38,8 +38,23 @@ const getTemplateID = (type, language) => {
     return process.env['MAILJET_TEMPLATE_' + templateName];
 };
 
-const getDataForTemplateID = (templateID, dataObj) => {
+const extractDataForTemplate = (dataObj) => {
+    const type = dataObj.type;
+    let extractedObj = {};
 
+    if (type === 'soc_reached') {
+        extractedObj = {
+            soc_value: dataObj.sync.soc_display || dataObj.sync.soc_bms,
+            soc_text: dataObj.sync.soc_display ? 'Display' : 'BMS',
+            range_value: 0, // TODO: implement range calculation
+            range_unit: dataObj.settings.range_unit,
+            consumption_value: dataObj.settings.consumption,
+            consumption_unit: dataObj.settings.consumption_unit,
+            consumption_text: (dataObj.settings.consumption_unit === 'km' ? '/100' : '/') + dataObj.settings.range_unit
+        };
+    }
+
+    return extractedObj;
 };
 
 module.exports = {
